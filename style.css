@@ -1,0 +1,187 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #F5A623;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+header,footer {
+    position: relative;
+    display: block;
+    height: 100px;
+}
+header:after{
+    content: " "; 
+    border-left: 100vw solid #fff;
+    border-top: 0vw solid transparent;
+    border-bottom: 5.6vw solid transparent;
+    width: 0;
+    height: 0;
+}
+header span{
+    font-family: 'Sigmar One';
+    font-style: normal;
+    font-weight: normal;
+    color: #F5A623 ;
+    transform: rotate(-4.5deg);
+    display: inline-block;
+    top: 5px;
+    left: 20px;
+    font-size: 5vw;
+    position: absolute;
+  
+}
+.starter{
+    width:32%;
+    margin:0 auto;
+    min-width:380px;
+}
+.startTxt {
+    float: right;
+    color: #fff;
+    font-family: Sigmar One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 0.7;
+    margin-right: 10px;
+}
+.starter .shape {
+    font-family: Poppins;
+    color: #1F1E1D;
+    display: inline-block;
+    background: #fff;
+    border-radius: 24px 24px 100px 100px;
+    padding: 24px;
+    font-size: 14px;
+}
+.starter .shape span:nth-child(1) {
+    font-weight:600;
+}
+.starter .shape span:nth-child(2) {
+    display: block;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 21px;
+    padding:0px 10px;
+}
+.bulbasaur-section {
+    width: 80%;
+    margin: 50px auto ;
+    flex-flow: wrap;
+    display: flex;
+}
+.bulbasaur {
+    text-align: center;
+    color: #fff;
+    width:20%;
+}
+    .bulbasaur:nth-child(n+2):nth-child(even):nth-child(-n+5), .bulbasaur:nth-child(n+5):nth-child(odd):nth-child(-n+10) {
+        padding-top: 50px
+    } 
+
+.topTxt {
+    font-family: Sigmar One;
+    font-size: 24px;
+    display: block;
+    
+}
+.circle {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 10px solid #F5A623;
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+.circle:before {
+    content: " ";
+    border-radius: 50%;
+    position: absolute;
+    border: 6px dashed #000;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    background: transparent;
+}
+
+.pokeMan {
+    background: url(pokemon.png);
+    width: 110px;
+    height: 110px;
+    display: inline-block;
+    z-index:1;
+}
+.bottomTxt {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+}
+.bulbasaur p {
+    font-family: Poppins;
+    font-size: 12px;
+    width: 80%;
+    margin: 0 auto;
+}
+footer {
+    text-align: right;
+    overflow:hidden;
+}
+footer:after {
+    content: " ";
+    border-left: 100vw solid #fff;
+    border-top: 5.6vw solid transparent;
+    border-bottom: 0vw solid transparent;
+    width: 0;
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+footer span {
+    right: 0;
+    position: absolute;
+    font-family: 'Sigmar One';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5vw;
+    transform: rotate(5deg);  
+    line-height: 1;
+    color:#fff;bottom:15px;
+}
+    
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    .bulbasaur {
+        width: 33.33%;
+    }
+   
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    .bulbasaur {
+        width: 50%;
+    }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .bulbasaur {
+        width: 100%;
+    }
+}
+@media (max-width: 380px) {
+
+    .starter {
+        width: 90%;
+        min-width: 0;
+    }
+}
